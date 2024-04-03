@@ -1,35 +1,41 @@
-import App_canales from './app_canales'
-import vite from '/vite.svg'
-import '../styles/app.css'
+import { useState } from "react";
+import react from "../assets/react.svg";
+import vite from "/vite.svg";
+import '../styles/app.css';
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
     <>
-      <header id='app-header' className='m-1 p-1 flex flex-col justify-center items-center'>
-        <head id='app-head' className='m-1 p-1 flex flex-row justify-start items-center'>
-          <h1 className='m-1 p-1 text-2.5xl font-semibold'>Pages-Tv</h1>
-          <a href="https://vitejs.dev" >
-            <img src={vite} className='m-1 p-1' alt="Vite logo" width={50} />
+      <div id="app"
+        className="m-5 p-5 flex flex-col justify-center items-center" >
+        <div id="app-container"
+          className="m-5 p-5 flex flex-row justify-start items-center" >
+          <h1 className="m-2.5 p-2.5 text-2.5xl font-semibold" >
+            Pages-Tv
+          </h1>
+          <a href="https://vitejs.dev">
+            <img src={vite} className="m-1 p-1" alt="Vite-Logo" width={75} />
           </a>
-        </head>
-        <nav id='app-nav' className="m-1 p-1 flex flex-row justify-center items-center">
-          <ul className='m-1 p-1'>
-            <a href="" alt="" className='m-1 p-1'>Inicio</a> \
-            <a href="" alt="" className='m-1 p-1'>Canales</a> \
-            <a href="" alt="" className='m-1 p-1'>Lista</a> \
-            <a href="" alt="" className='m-1 p-1'>Acerca</a> \
-            <a href="" alt="" className='m-1 p-1'>Contacto</a>
-          </ul>
-        </nav>
-        <p id="read" className='m-2.5 p-2.5 bg-[#1A1A1A] rounded-lg'>
-          Bienvenid@ a Pages-Tv donde Puedes Acceder <br /> a cualquier Canal de Tv gratuitamente y libre.
+          <a href="https://reactjs.dev">
+            <img src={react} className="m-1 p-1" alt="React-Logo" width={75} />
+          </a>
+        </div>
+        <div id="app-card"
+          className="m-2.5 p-2.5 flex flex-row justify-center items-center" >
+          <button onClick={() => setCount((count) => count + 1)} >
+            Count Is - {count}
+          </button>
+          <p className="m-2.5 p-2.5 bg-[#1A1A21] text-slate-300 rounded-xl" >
+            Edit <code>Src/App.jsx</code> and save to test Hmr
+          </p>
+        </div>
+        <p id="read" className="m-2.5 p-2.5 bg-[#1A121A] rounded-lg"  >
+          Click on the Vite and React Logos to learn more
         </p>
-      </header>
-      <main id="app-main">
-        <App_canales />
-      </main>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
