@@ -12,7 +12,7 @@ function App() {
         <div id="app-container"
           className="m-5 p-5 flex flex-row justify-start items-center" >
           <h1 className="m-2.5 p-2.5 text-2.5xl font-semibold" >
-            Pages-Tv
+            Pages-Movies
           </h1>
           <a href="https://vitejs.dev">
             <img src={vite} className="m-1 p-1" alt="Vite-Logo" width={75} />
